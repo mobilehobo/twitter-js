@@ -10,10 +10,6 @@ module.exports = function (io) {
         res.render('index', { tweets: tweets, showForm: true });
     });
 
-    // router.get('/stylesheets/:fileName', (req,res)=>{
-    //     res.sendFile(req.params.fileName, {root: './public/stylesheets/'});
-    // });
-
     router.use(express.static('public'));
 
     router.get('/users/:name', (req, res) => {
